@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic|Libre+Baskerville:400italic,700' rel='stylesheet' type='text/css'> -->
+
+        <!-- Icons: -->
+
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>The Menu at Pembroke</title>
+    </head>
+    <body>
+        <div id="firstPop">
+                <div id="firstInside">
+                    <p id="above">Welcome to</p>
+                    <h1>The Menu</h1>
+                    <p id="below">Daily menus from Pembroke College, Cambridge.</p>
+                    <p id="attrib">An app by <a href="https://dunkley.me" target="_blank">Oliver Dunkley</a>.</p>
+                    <hr class="line" />
+                </div>
+            </div>
+        <div class="app">
+            <div id="footerPop">
+                <div id="popInside">
+                    <h1>About this app</h1>
+                    <p>App by <span class="b"><a href="https://dunkley.me" target="_blank">Oliver Dunkley</a>.</span> Version 0.9.4</p>
+                    <hr class="line" />
+                    <span class="b"><p>To install this app onto your home screen:</p></span>
+                    <ol>
+                        <li>Go to <span class="b"><a href="http://themenu.cf">themenu.cf</a></span> from your phone</li>
+                        <li>Tap the <span class="b">share</span> button (iPhone) or <span class="b">menu</span> button (Android), then tap <span class="b">"Add to Home Screen"</span></li>
+                    </ol>
+                    <hr class="line" />
+                    <p>This app fetches the day's café/buttery/trough menu from the <a href="http://thepembrokekitchen.blogspot.co.uk/" target="_blank">catering blog</a> of Pembroke College, Cambridge. If there are obvious errors here, check the original as there may be posts about it or other important things. For day to day use, this should work pretty well.</p>
+                    <p>I'm sure the catering dept. and JPC food officer would like it if you sent them any feedback about your <a href="https://docs.google.com/forms/d/1vPWtFDY0Sy9jgi6luvb1F9q_fOh0IUdV6JnHyrNpkqw/viewform" target="_blank">trough meal</a> or <a href="https://docs.google.com/forms/d/1YnycxhSEhkm6AQazKis81sbRww24_49DzVYJzyYkaKk/viewform" target="_blank">formal hall</a>.</p>
+                    <p class="italic">Enjoy!</p>
+                    <hr class="line" />
+                    <p id="cookieText">Feed parsing engine uses <a href="http://fivefilters.org/" target="_blank">FiveFilters</a> and <a href="https://developer.yahoo.com/yql/" target="_blank">YQL</a>. Icon SVG designed by <a href="http://www.freepik.com/" target="_blank">Freepik</a>. This app uses cookies from Google and by using you agree to this. I take no responsibility for wrong or misleading information caused by feed parsing errors.</p>
+                    <p></p>
+                </div>
+                <div id="closePop"><a href="" onclick="hidePop(); return false">X</a></div>
+            </div>
+            <div id="pretop"></div>
+            <div id="topbar">
+                <div id="line1">
+                    <h1>The Menu</h1>
+                </div>
+                <div id="line2">
+                    <h2>for Monday, 19 Jan 2016</h2>
+                </div>
+                <!--<div id="i">?</div>-->
+            </div>
+            <div id="loading">
+                <div class="innerLoading" id="waiting">
+                    <p>Loading...</p>
+                </div>
+                <div class="innerLoading" id="error">
+                    <p>Retrying...</p>
+                    <p class="small">Could not load content. Check the <a href="http://thepembrokekitchen.blogspot.co.uk/" target="_blank">catering blog</a> if it continues.</p>
+                </div>
+                <div class="innerLoading" id="notPublished">
+                    <p>Today's menu hasn't been published yet.</p>
+                    <p class="small"><a href="" onclick="window.location.reload()">Retry</a> or check back later.</p>
+                </div>
+            </div>
+            <div id="mainPane">
+                <div class="menu" id="menu1">
+                    <div class="meal" id="menu1meal"></div>
+                </div>
+                <div id="columnSplit"></div>
+                <div class="menu" id="menu2">
+                    <div class="meal" id="menu2meal"></div>
+                </div>
+                <div class="menu" id="menu3">
+                    <div class="meal" id="menu3meal"></div>
+                </div>
+                <div id="columnSplit"></div>
+                <div class="menu" id="menu4">
+                    <div class="meal" id="menu4meal"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="spacer"></div>
+            <div id="footer">
+                <table><tr>
+                    <td class="l"><a href="http://thepembrokekitchen.blogspot.co.uk/" target="_blank">catering blog</a></td>
+                    <td class="m"><a href="" onclick="window.location.reload()">&#8635;</a></td>
+                    <td class="r"><a href="" onclick="showPop(); return false;">about this app</a></td>
+                </tr>
+            </div></table>
+            <div id="feed"></div>
+        </div>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="scripts.js?v0005"></script>
+    </body>
+</html>
