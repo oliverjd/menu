@@ -41,7 +41,7 @@ const populateMenu = (entry) => {
         let i = menu[menuNum].length;
 
         while(item) {
-            menu[menuNum].push({food: '', price: '', contains: '', type: 'none'}); 
+            menu[menuNum].push({food: '', price: '', contains: '', type: 'none'});
             const twoSpaces = (parseString.substring(0, parseString.search(/£/))).search(/\b\s*[\n\r]/);
             const vegV = (parseString.substring(0, parseString.search(/£/))).search(/\(V\)/);
             let tempContains;
@@ -380,7 +380,7 @@ if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.matc
     document.getElementById('firstInside').innerHTML += '<p>To use this app, you should install it to your home screen:</p><ol><li>Tap the <img src=\'img/android-menu.png\' id=\'android\' /> <span class=\'b\'>menu button</span></li><li>Tap <span class=\'b\'>\'Add to Home screen\'</span> then tap <span class=\'b\'>\'Add\'</span></li><li>Close this browser and launch the app!</li></ol><p id=\'small\'>(To browse as a website instead, <span class=\'b\'><a href=\'\'>tap here</a></span> and this message won\'t be shown again.)</p>';
 } else {
     // assume desktop
-    document.getElementById('firstInside').innerHTML += '<p>You can install this app by visiting <a href=\'http://themenu.cf\'>themenu.cf</a> from your phone.</p><p>To use it as a website on your computer, <span class=\'b\'><a href=\'\'>click here</a></span> and this message won\'t be shown again.</p>';
+    document.getElementById('firstInside').innerHTML += '<p>You can install this app by visiting <a href=\'https://menu.dunkley.me\'>menu.dunkley.me</a> from your phone.</p><p>To use it as a website on your computer, <span class=\'b\'><a href=\'\'>click here</a></span> and this message won\'t be shown again.</p>';
 }
 
 var shown= localStorage.getItem('isshown');
