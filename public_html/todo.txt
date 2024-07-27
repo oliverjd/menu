@@ -1,0 +1,25 @@
+BEFORE FIRST RELEASE:
+
+mainpane footer is blocking clicks of footer links
+
+
+
+- make the lunch/dinner sections collapsible with a >> icon or something?
+- create google manifest
+- make a home-screen icon
+- implement app caching
+- implement a nice spinner/loading screen/icon
+- make it handle gracefully when it can't read the post or parse it
+- make it ignore the first post if it's a formal hall menu and use the second instead
+- a pop-up for each of ios and android (different location?) to prompt user to install web-app on home-screen (using html5 local storage to keep track of first time only shown) see cubiq app
+
+EVENTUAL FEATURES:
+- formal hall menus
+
+done:
+
+- fix the awful google engine by replacing with yql!
+- make the "menu" blue bit at the top static so it stays put on screen (more app-like)
+- make it display in two columns on desktop (i.e. wider than 768 or something) and also have side margins on a desktop (maybe phone try that too)
+- try small white margin above top bar to see if it looks better
+- make the footer links work and an "about this app" pop-over
